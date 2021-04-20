@@ -1,0 +1,12 @@
+// styling thank you popup
+.thankyou-popup {
+  @extend .boost-popup;
+  padding-bottom: 40px;
+  p {
+    padding-right: 11%;
+    margin-bottom: 32px;
+  }
+}
+.verification-popup {
+  @extend .thankyou-popup;
+}

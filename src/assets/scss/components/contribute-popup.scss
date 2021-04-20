@@ -1,0 +1,63 @@
+// styling contibute popup
+.contribute-popup {
+  @extend .boost-popup;
+  max-width: 932px;
+  padding: 0;
+  overflow: hidden;
+  h2 {
+    font-size: $base-size * 2.2;
+  }
+  p {
+    font-size: $base-size * 1.8;
+    padding-right: 20px;
+    margin-bottom: 34px;
+  }
+  .form-group {
+    margin-bottom: 27px;
+  }
+  form {
+    width: 50%;
+    padding: 40px 30px 45px;
+    .btn {
+      font-size: $base-size * 2;
+    }
+  }
+}
+.contribute-img {
+  width: 50%;
+  padding: 30px;
+  background-color: #ebdbcd;
+}
+
+@media all and (max-width: 1199px) {
+  .contribute-popup {
+    max-width: 600px;
+    form {
+      width: 100%;
+    }
+  }
+  .contribute-img {
+    width: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  .contribute-popup {
+    form {
+      padding: 30px 15px;
+    }
+    h2 {
+      font-size: $base-size * 1.8;
+    }
+    p {
+      font-size: $base-size * 1.4;
+    }
+    .input-field {
+      padding: 0 20px;
+    }
+    form {
+      .btn {
+        font-size: $base-size * 1.4;
+      }
+    }
+  }
+}

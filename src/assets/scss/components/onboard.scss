@@ -1,0 +1,193 @@
+// styling login section
+.overlay {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 0;
+  overflow-y: auto;
+  z-index: 9;
+}
+.sign-reg {
+  padding:0;
+  .signup-content{
+    transform: translateY(-50%);
+    top: 75%;
+  }
+}
+.log-reg{
+  padding:0;
+  .log-p{
+    transform: translateY(-50%);
+    top: 75%;
+    .idle-girl{
+      width: 168px;
+    }
+  }
+}
+
+.popup-content {
+  @include radius(16px);
+  background-color: $color-white;
+  max-width: 712px;
+  width: 90%;
+  padding: 167px 153px 277px;
+  margin: 0 auto;
+  position: relative;
+  h1 {
+    font-size: $base-size * 4.5;
+    color: $color-blue;
+    font-weight: $wt700;
+    margin-bottom: 55px;
+    img {
+      width: 45px;
+      margin-top: -15px;
+    }
+  }
+  &:after {
+    @include after(138px, 150px);
+    @include abs(0, 0, auto, auto);
+    background: url(../img/curly-rope.svg) center top no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.icon-mail {
+  @include abs(21px, auto, auto, 20px);
+}
+.icon-key {
+  @include abs(22px, auto, auto, 20px);
+}
+.icon-avatar {
+  @include abs(18px, auto, auto, 20px);
+}
+.login-btn-wrap {
+  padding-top: 13px;
+  margin-bottom: 34px;
+  .btn {
+    min-width: 232px;
+    padding: 13px 30px;
+  }
+}
+.signup-link-wrap {
+  span {
+    display: block;
+    margin-bottom: 17px;
+  }
+}
+.signup-link {
+  color: #828282;
+  font-size: $base-size * 2;
+  a {
+    font-weight: $wt700;
+    color: $color-blue;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.frgt-pwd {
+  color: $color-blue;
+  font-family: $font-manrope;
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.flower-pot {
+  @include abs(auto, auto, 137px, 30px);
+  width: 168px;
+}
+.idle-girl {
+  @include abs(auto, 0, 130px, auto);
+  width: 180px;
+}
+.signup-content {
+  @extend .popup-content;
+  padding-top: 200px;
+  padding-bottom: 132px;
+  h1 {
+    margin-bottom: 68px;
+  }
+  .login-btn-wrap {
+    padding-top: 40px;
+  }
+  .flower-pot {
+    width: 132px;
+    bottom: 48px;
+    left: 33px;
+  }
+  .idle-girl {
+    width: 154px;
+    bottom: 46px;
+  }
+  &:after {
+    width: 125px;
+    height: 130px;
+  }
+}
+@media all and (max-width: 1023px) {
+  .popup-content {
+    padding: 167px 100px 277px;
+  }
+}
+@media all and (max-width: 767px) {
+  .popup-content {
+    padding: 50px 20px 80px;
+    h1 {
+      font-size: $base-size * 2.4;
+      margin-bottom: 30px;
+      img {
+        width: 25px;
+        margin-top: 0;
+      }
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .login-btn-wrap {
+    padding-top: 0;
+  }
+  .signup-link {
+    font-size: $base-size * 1.6;
+  }
+}
+
+// Adjust Pop-up Scroll	
+@media all and (min-width: 768px) and (min-height: 640px) {	
+  .popup-content {	
+    padding-top: 8vh;	
+    padding-bottom:8vh;	
+    h1 {	
+      margin-bottom: 20px;	
+    }	
+    .form-group{	
+      margin-bottom: 20px;	
+    }	
+    .login-btn-wrap{	
+      padding-top:0;	
+    }	
+  }	
+  .sign-reg {	
+    padding:0;	
+    .signup-content{	
+      transform: translateY(-50%);	
+      top: 50%;	
+    }	
+  }	
+  .log-reg{	
+    padding:0;	
+    .log-p{	
+      transform: translateY(-50%);	
+      top: 50%;	
+      .idle-girl{	
+        width: 168px;	
+      }	
+    }	
+  }	
+}

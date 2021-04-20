@@ -1,0 +1,1 @@
+export const BASE_URL = 'http://thesst.com/SUW2001/public'

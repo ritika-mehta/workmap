@@ -1,0 +1,208 @@
+// styling profile page
+.profile-content-wrap {
+  .banner {
+    margin-bottom: 52px;
+  }
+}
+.profile-sec {
+  @include radius(16px);
+  padding: 80px 50px 208px;
+  background-color: $color-white;
+  position: relative;
+  form {
+    width: 100%;
+    max-width: 406px;
+    margin: 0 auto;
+  }
+  .login-btn-wrap {
+    margin: 0 -50px;
+    padding-top: 45px;
+    .btn {
+      margin: 0 10px 15px;
+    }
+  }
+  .flower-pot {
+    bottom: 113px;
+    left: 75px;
+  }
+  .idle-girl {
+    width: 318px;
+    right: 78px;
+    bottom: 111px;
+  }
+}
+.user-profile-wrap {
+  text-align: center;
+  margin-bottom: 29px;
+}
+.profile-img {
+  margin: 0;
+  display: inline-block;
+  img {
+    @include radius(50%);
+    @include border(3px, solid, $color-blue);
+    width: 180px;
+    height: 180px;
+  }
+}
+.profile-title {
+  color: $color-blue;
+  font-size: $base-size * 3.2;
+  font-weight: $wt700;
+  display: block;
+  margin-top: 31px;
+}
+.profile-pic {
+  @include radius(50%);
+  overflow: hidden;
+  position: relative;
+  &:after {
+    @include after(85px, 62px);
+    @include abs(auto, 3px, 3px, auto);
+    @include transition(all 0.5s);
+    background-color: #345d64;
+    opacity: 0;
+  }
+  &:before {
+    @include after(85px, 62px);
+    @include abs(auto, auto, 3px, 3px);
+    @include transition(all 0.5s);
+    background-color: #345d64;
+    opacity: 0;
+  }
+  &:hover {
+    &:after {
+      opacity: 0.3;
+    }
+    &:before {
+      opacity: 0.3;
+    }
+    .btn-delete {
+      opacity: 1;
+      pointer-events: unset;
+    }
+    .btn-cam {
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
+}
+.btn-delete {
+  @include abs(auto, auto, 25px, 48px);
+  @include transition(all 0.5s);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-cam {
+  @include abs(auto, 52px, 25px, auto);
+  @include transition(all 0.5s);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+.profile-info {
+  display: inline-block;
+}
+.influencer-name {
+  @include border(4px, solid, $color-blue);
+  @include radius(50%);
+  text-transform: uppercase;
+  color: $color-blue;
+  font-size: $base-size * 5;
+  width: 180px;
+  height: 180px;
+  font-weight: $wt700;
+  overflow: hidden;
+}
+.btn-edit {
+  @include abs(18px, 30px, auto, auto);
+}
+.change-pwd-popup {
+  @extend .boost-popup;
+  .input-field {
+    padding-right: 56px;
+  }
+  .login-btn-wrap {
+    padding-top: 0;
+    margin-bottom: 22px;
+  }
+}
+.current-pwd {
+  border-bottom: 1px solid $color-light;
+  padding-top: 13px;
+  margin-bottom: 40px;
+  .form-group {
+    margin-bottom: 33px;
+  }
+}
+.hide-pwd {
+  @include abs(18px, 24px, auto, auto);
+}
+.show-pwd {
+  @include abs(18px, 24px, auto, auto);
+}
+@media all and (max-width: 1799px) {
+  .profile-sec {
+    .idle-girl {
+      width: 240px;
+    }
+  }
+}
+@media all and (max-width: 1599px) {
+  .profile-sec {
+    .idle-girl {
+      width: 210px;
+      right: 30px;
+    }
+  }
+}
+@media all and (max-width: 1199px) {
+  .profile-sec {
+    .idle-girl {
+      width: 180px;
+      right: 10px;
+    }
+    .flower-pot {
+      left: 30px;
+    }
+  }
+}
+@media all and (max-width: 1023px) {
+  .profile-sec {
+    padding: 50px 10px;
+    .login-btn-wrap {
+      padding-top: 13px;
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .profile-content-wrap {
+    .banner {
+      margin-bottom: 33px;
+    }
+  }
+
+  .profile-sec {
+    .login-btn-wrap {
+      margin: 0;
+    }
+  }
+}
+
+body {
+  padding-top: 20px;
+}
+
+.invalid-feedback {
+  display: block !important;
+}
+
+.ErrorForm {
+  border-color: red;
+
+}
+.errmsg{
+  opacity: 1 !important;
+  color: red;
+}

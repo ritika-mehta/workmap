@@ -1,0 +1,130 @@
+@import "common";
+@import "header";
+@import "footer";
+@import "vacancy";
+@import "aside";
+@import "test-progress-navigation";
+@import "test-forms/knock-out-questions";
+@import "upload-cv";
+@import "content";
+@import "test-forms/personality-test";
+@import "test-forms/sjt-part-one";
+@import "test-forms/sjt-part-two";
+@import "test-details-mobile";
+@import "auth-form";
+@import "buttons";
+@import "checkbox";
+@import "steps";
+@import "links";
+@import "profile-settings";
+@import "tip-popup";
+@import "help-pop-up";
+@import "loader";
+@import "customRadioBtn";
+@import "modalDelete";
+@import "testProgressBar";
+@import "personalityTest";
+@import "careerDrivers";
+
+/* Login form */
+.login-form-b-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+.login-form-b-list li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+/* Error */
+.small-error {
+  color: #ff4c4c !important;
+  font-size: 13px;
+  line-height: 13px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.test-question-title {
+  color: #302f2f;
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.test-choose-answer {
+  color: rgba(51, 51, 51, 0.8);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.96px;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  align-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* Test timer and btn */
+.test-timer-and-btn {
+  display: flex;
+  align-items: center;
+}
+
+.clock-icon {
+  height: 36px;
+  width: 36px;
+  background-color: #ffeeee;
+  border-radius: 35px;
+  display: inline-block;
+  margin-right: 7px;
+  position: relative;
+}
+
+.clock-icon:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  height: 22px;
+  width: 22px;
+  background-image: url(/assets/img/timer.svg);
+}
+
+.test-timer-and-btn p {
+  display: inline-block;
+  margin: 0;
+  margin-right: 16px;
+  color: #2e2e2e;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.12px;
+}
+
+.test-timer-and-btn button {
+  padding: 0 24px;
+  min-width: 100px;
+  height: 45px;
+}
+ul {
+  list-style: none;
+  li {
+    overflow: hidden;
+  }
+}
+.MuiSlider-root {
+  color: #27a4a1 !important;
+}
+// #cards.cards.uniqueCalssForCareerDrivers {
+//   height: auto !important;
+// }

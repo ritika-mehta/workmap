@@ -1,0 +1,78 @@
+// styling save page
+.save-head {
+  margin-bottom: 20px;
+  .btn {
+    font-size: $base-size * 2;
+    font-weight: $wt500;
+    padding: 3px 20px;
+    letter-spacing: 0.2px;
+    background-color: $color-white;
+    &:hover {
+      background-color: $color-blue;
+    }
+  }
+}
+.layout-view {
+  @include radius(24px);
+  background-color: $color-white;
+  padding: 13px 38px;
+  margin-top: -10px;
+  button {
+    path {
+      fill: $color-light;
+    }
+    &.active {
+      path {
+        fill: $color-grey-light;
+      }
+    }
+  }
+  li {
+    position: relative;
+    padding: 0 22px;
+    &:after {
+      @include after(1px, 24px);
+      @include abs(0, 0, auto, auto);
+      background-color: $color-grey;
+    }
+    &:last-child {
+      padding-right: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .save-head {
+    .btn {
+      font-size: $base-size * 1.4;
+    }
+  }
+  .layout-view {
+    padding: 7px 30px;
+    li {
+      &:after {
+        height: 18px;
+      }
+    }
+    button {
+      svg {
+        max-height: 16px;
+        width: auto;
+      }
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .layout-view {
+    margin-top: 0;
+    li {
+      padding: 0 15px;
+    }
+  }
+}

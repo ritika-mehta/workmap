@@ -1,0 +1,209 @@
+// styling header section
+.header {
+  background-color: $color-white;
+  margin: 0 -40px 30px;
+  padding: 26px 40px;
+  position: relative;
+  z-index: 1;
+}
+.action-btn-wrap {
+  @include radius(24px);
+  background-color: $color-body-bg;
+  padding: 13px 40px;
+  li {
+    position: relative;
+    padding: 0 25px;
+    &:after {
+      @include after(1px, 24px);
+      @include abs(0, 0, auto, auto);
+      background-color: $color-grey;
+    }
+    &:last-child {
+      padding-right: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+.header-btn {
+  li {
+    margin-left: 24px;
+  }
+}
+.boost-btn-wrap {
+  width: 336px;
+  .btn {
+    min-width: 212px;
+  }
+  .btn-plus {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin-left: 15px;
+    span {
+      width: 48px;
+      height: 48px;
+      border-color: $color-blue-dark;
+    }
+    svg {
+      width: 36px;
+      height: 36px;
+      path {
+        fill: $color-blue-dark;
+      }
+    }
+  }
+}
+.user-profile {
+  position: relative;
+  padding-left: 48px;
+  margin-left: 40px;
+  cursor: pointer;
+  .info-graphic-icon {
+    width: 44px;
+    height: 44px;
+    margin-left: 15px;
+  }
+  .user-name {
+    font-size: $base-size * 1.4;
+    color: $color-grey-light;
+  }
+  &:after {
+    @include after(1px, 24px);
+    @include abs(10px, auto, auto, 0);
+    background-color: $color-light;
+  }
+  &:hover {
+    .profile-dropdown {
+      display: block;
+    }
+  }
+}
+.profile-dropdown {
+  @include abs(100%, 0, auto, auto);
+  padding-top: 10px;
+  width: 232px;
+  display: none;
+  ul {
+    @include border(2px, solid, #b9c4f5);
+    @include radius(8px);
+    box-shadow: 0px 4px 8px rgba(69, 85, 163, 0.2);
+    padding: 3px 0;
+    background-color: $color-white;
+    button {
+      width: 100%;
+      color: $color-grey-dark;
+      font-size: $base-size * 1.4;
+      text-transform: capitalize;
+      padding: 5px 24px;
+      text-align: left;
+      min-height: 42px;
+      span {
+        display: flex;
+        align-items: center;
+      }
+      svg {
+        margin-right: 8px;
+        path {
+          fill: $color-light;
+        }
+      }
+      &:hover {
+        color: $color-blue-dark;
+        background-color: #eff0f8;
+        path {
+          fill: $color-blue-dark;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 1599px) {
+  .header {
+    margin: 0 -20px 30px;
+    padding: 20px 20px;
+  }
+}
+@media all and (max-width: 1023px) {
+  .action-btn-wrap {
+    padding: 7px 30px;
+    li {
+      padding: 0 18px;
+      svg {
+        max-height: 16px;
+        width: auto;
+      }
+      &:after {
+        height: 18px;
+      }
+    }
+  }
+  .boost-btn-wrap {
+    width: auto;
+    .btn {
+      min-width: inherit;
+    }
+    .btn-plus {
+      width: 36px;
+      height: 36px;
+      span {
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+      }
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+  .user-profile {
+    padding-left: 15px;
+    margin-left: 20px;
+    .user-name {
+      font-size: $base-size * 1.2;
+    }
+    .info-graphic-icon {
+      width: 35px;
+      height: 35px;
+      font-size: $base-size * 1.2;
+    }
+    &:after {
+      top: 6px;
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .action-btn-wrap {
+    margin-bottom: 20px;
+  }
+  .header-btn {
+    li {
+      margin: 0 10px;
+    }
+  }
+  .secondary-header {
+    flex-direction: column;
+  }
+  .boost-btn-wrap {
+    margin-bottom: 15px;
+  }
+  .user-profile {
+    padding-left: 0px;
+    margin-left: 0px;
+    &:after {
+      display: none;
+    }
+  }
+  .profile-dropdown {
+    right: -40px;
+  }
+}
